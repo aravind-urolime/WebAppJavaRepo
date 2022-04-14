@@ -22,9 +22,9 @@ phases:
        - mvn clean deploy
        - docker login  -u $USER_NAME -p $PASSWORD
        - docker build -t maven-tomcat:$COMMIT_HASH .
-       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 463146931926.dkr.ecr.us-east-1.amazonaws.com
-       - docker tag maven-tomcat:$COMMIT_HASH 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH
-       - docker push 463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH
+       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 258706517898.dkr.ecr.us-east-1.amazonaws.com
+       - docker tag maven-tomcat:$COMMIT_HASH 258706517898.dkr.ecr.us-east-1.amazonaws.com/terraform:$COMMIT_HASH
+       - docker push 258706517898.dkr.ecr.us-east-1.amazonaws.com/terraform:$COMMIT_HASH
     post_build:
       commands:
        - echo Build completed on `date`
