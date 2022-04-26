@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "{\"ImageURI\": \"463146931926.dkr.ecr.us-east-1.amazonaws.com/maven-tomcat:$COMMIT_HASH\"}" > imageDetail.json
+echo "{\"ImageURI\": \"258706517898.dkr.ecr.us-east-1.amazonaws.com/terraform:$COMMIT_HASH\"}" > imageDetail.json
